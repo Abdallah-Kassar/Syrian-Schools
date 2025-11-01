@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+.prose {
+    font-size: 1.125rem;
+    line-height: 1.75;
+}
+
+.prose p {
+    margin-bottom: 1.5em;
+}
+
+@media (max-width: 768px) {
+    .prose {
+        font-size: 1rem;
+    }
+    
+    .float-right {
+        float: none !important;
+        margin-left: 0 !important;
+        margin-bottom: 2rem !important;
+        width: 100% !important;
+    }
+    .float-right img{
+        width: 60% !important;
+    }
+}
+
+/* Smooth responsive padding transition */
+main {
+    transition: padding 0.3s ease;
+}
+
+/* Chart container responsive adjustments */
+canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    z-index: 1000;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.nav-container a {
+    text-decoration: none;
+    color: #111;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    font-size: 14px;
+    transition: color 0.2s ease, border-bottom 0.2s ease;
+    padding-bottom: 4px;
+}
+
+.nav-container a:hover {
+    color: #555;
+    border-bottom: 2px solid #000;
+}
+
+  /* Add top spacing to content so it doesn't hide under fixed nav */
+body {
+    margin: 0;
+    font-family: "Arial", sans-serif;
+}
+main {
+    margin-top: 70px; /* space for fixed nav */
+    padding: 20px;
+}
+
+  /* Optional: make it look good on small screens */
+@media (max-width: 600px) {
+    nav{
+        display: none;
+    }
+    main {
+        margin-top: 0; /* space for fixed nav */
+    }
+}
+
+
+#score-chart {
+    font-family: "Arial", sans-serif;
+    background: #f6f6f6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+
+#score-chart h1 {
+    color: #222;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#score-chart canvas {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+#score-chart .controls {
+    margin-top: 20px;
+}
+
+#score-chart button {
+    margin: 5px;
+    padding: 10px 16px;
+    border: 1px solid #222;
+    border-radius: 6px;
+    background-color: #fff;
+    color: #111;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+#score-chart button:hover {
+    background-color: #222;
+    color: #fff;
+}

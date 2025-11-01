@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery</title>
+  <style>
+    body {
+      background-color: #fff;
+      color: #000;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 1rem 0;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 10px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 900px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .gallery {
+        grid-template-columns: repeat(1, 1fr);
+      }
+      .gallery img {
+        height: 250px;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid #000;
+    }
+
+    footer a {
+      color: #000;
+      text-decoration: none;
+      font-size: 1rem;
+      border-bottom: 1px solid #000;
+      padding-bottom: 2px;
+      transition: opacity 0.2s ease;
+    }
+
+    footer a:hover {
+      opacity: 0.6;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <nav>
+        <div class="nav-container">
+          <a href="index.html">Summary</a>
+          <a href="#methodology">Methodology</a>
+          <a href="#findings">Findings</a>
+          <a href="#solutions">Solutions</a>
+          <a href="#media">Media Documentation</a>
+        </div>
+    </nav>
+  <h1 style="margin-top: 80px;">Gallery:</h1>
+  <div class="gallery">
+    <img src="media/IMG_20251026_100455.jpg" alt="Image 1">
+    <img src="media/IMG_20251026_113334.jpg" alt="Image 1">
+    <img src="media/IMG_20251030_145228.jpg" alt="Image 1">
+    <img src="media/IMG_20251101_163518.jpg" alt="">
+    <img src="media/IMG_20251101_161250.jpg" alt="Image 1">
+    <img src="media/IMG_20251101_162331.jpg" alt="Image 1">
+    <img src="media/IMG_20251101_162442.jpg" alt="Image 1">
+    <img src="media/IMG_20251101_163203.jpg" alt="Image 1">
+    <img src="media/IMG_20251101_163424.jpg" alt="Image 1">
+    <img src="media/IMG_20251026_100927.jpg" alt="Image 1">
+  </div>
+
+  <footer>
+    <p><a href="https://drive.google.com/your-folder-link" target="_blank">View more images on Google Drive →</a></p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syrian Education Field Research</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+    <nav>
+        <div class="nav-container">
+          <a href="#summary">Summary</a>
+          <a href="#methodology">Methodology</a>
+          <a href="#findings">Findings</a>
+          <a href="#solutions">Solutions</a>
+          <a href="media_display.html">Media Documentation</a>
+        </div>
+    </nav>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <header class="mb-16">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Syrian Education Field Research</h1>
+            <p class="text-xl text-gray-600">A personal project of educational data collection</p>
+        </header>
+
+        <!-- Images -->
+        <section class="mb-16" >
+            <div class="flex flex-col lg:flex-row gap-8" style="justify-content: center; align-items: center;">
+                <div class="lg:w-1/2 flex flex-col gap-8">
+                    <img src="media/broken equipments.jpg" alt="Students studying" class="w-full h-[50vh] rounded-lg shadow-md object-cover">
+                    <img src="media/selfie.jpg" alt="Syrian school classroom" class="w-full h-[50vh] rounded-lg shadow-md object-cover">
+                </div>
+                <div class="lg:w-1/2">
+                    <img src="media/art_amid.jpg" alt="School building" class="w-full h-[535px] rounded-lg shadow-md object-cover" id="third-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Introduction -->
+        <section class="mb-24 relative">
+    
+            <div class="prose ">
+                <p>Every school I visited was a confusing mix of familiarity and surprise. Dimly lit classrooms were a sight I grew up dear to. Highly-diluted chlorine was nostalgia for my nostrils. And the sound of kids, amplifying as I approached each school, reminded me of the mornings I was late to school because the public bus driver stopped for coffee. Although I grew up accustomed to the many of the problems I saw, they were shocking from an outside perspective after 3 years in a private high school.</p>
+                <p>“We are used to it,” teachers, parents, and students repeatedly told me. But they weren’t only used to it; they improvised. A loving mother re-enrolled at college to teach her special needs kid. A caring principal revamped the basement to take in displaced students. A prison repurposed into a school in a rural area. As inspiring as they are, those stories painted a scary picture: education, the only way to rebuild Syria, feels as if it’s about to crumble itself. </p>
+            </div>
+        </section>
+
+        <!-- Methodology -->
+        <section class="mb-24 relative">
+            <div class="float-right ml-8 mb-4 md:block mt-14" style="width: 30vw">
+                <img src="media/map2.jpg" alt="Research methodology" class="rounded-lg shadow-md" style="width: 100%">
+                <img src="media/map1.jpg" alt="Research methodology" class="rounded-lg shadow-md" style="width: 100%; margin-top: 15px;">
+            </div>
+            <h2 class="text-2xl font-semibold mb-6">Methodology</h2>
+            <div class="prose ">
+                <p>My methodology evolved organically as I gained more experience visiting schools. Initially, I focused on basic observational techniques, documenting classroom layouts, student-teacher interactions, and available resources. As I became more familiar with the environment, I began conducting semi-structured interviews with teachers during their breaks, asking about their daily challenges, teaching methods, and perceptions of student needs.</p>
+                <p>I visited a total of 18 schools across three governorates, spending at least two full days at each institution. The selection wasn't random but rather aimed at capturing diverse contexts: urban and rural schools, public and private institutions, schools in relatively stable areas and those operating in more challenging circumstances. In each case, I sought to understand not just the quantifiable aspects of education, but the human stories behind the numbers.</p>
+                <p>Documentation included photographs (with permission), detailed field notes, and audio recordings when appropriate. I maintained a reflexive journal to track my own evolving understanding and potential biases throughout the process. This qualitative approach was complemented by collecting available quantitative data when possible, particularly regarding student performance and resource allocation.</p>
+            </div>
+        </section>
+
+        <!-- Findings and Stories -->
+        <section class="mb-24 relative">
+            <div class="float-right ml-8 mb-4 md:block mt-14" style="width: 30vw">
+                <img src="media/poor-lit.jpg" alt="Student stories" class="rounded-lg shadow-md" style="width: 100%">
+            </div>
+            <h2 class="text-2xl font-semibold mb-6">Findings and Stories</h2>
+            <div class="prose ">
+                <p>The schools revealed a landscape of both struggle and remarkable adaptation. Class sizes varied dramatically, from overcrowded public school classrooms with 50+ students to private institutions maintaining ratios of 20:1. Resource limitations were nearly universal, but responses varied - some schools had developed ingenious low-tech teaching aids, while others relied heavily on rote memorization to compensate for lack of materials.</p>
+                <p>One particularly memorable story came from a rural school where the physics teacher had constructed all lab equipment from recycled materials - pendulum experiments using string and fishing weights, optics demonstrations with broken mirrors. The students' engagement and understanding rivaled that of much better-equipped urban schools. Conversely, an elite private school showed surprisingly rigid teaching methods despite having every technological advantage.</p>
+                <p>The human element consistently emerged as most significant. A math teacher in Damascus had developed her own curriculum to bridge gaps in students' knowledge caused by displacement. A principal in Aleppo transformed his school into a community hub offering evening classes for working students. These individual efforts often made more difference than official policies or resource levels.</p>
+            </div>
+            
+            <!-- Chart Section -->
+            <div id="score-chart">
+                <h1>12th Grade National Leaving Exam Scores</h1>
+                <canvas id="scoreChart" width="700" height="400"></canvas>
+        
+                <div class="controls">
+                <button onclick="updateChart('Total')">Total Score</button>
+                <button onclick="updateChart('Math')">Math</button>
+                <button onclick="updateChart('Physics')">Physics</button>
+                </div>
+        
+            </div>
+        </section>
+
+        <!-- Solutions and Agencies -->
+        <section class="mb-16 relative">
+            <div class="float-right ml-8 mb-4 md:block mt-14" style="width: 30vw">
+                <img src="media/corridor.jpg" alt="school corridor" class="rounded-lg shadow-md" style="width: 100%">
+            </div>
+            <h2 class="text-2xl font-semibold mb-6">Solutions and Government Agencies</h2>
+            <div class="prose ">
+                <p>The challenges facing Syrian schools require coordinated responses that recognize both systemic issues and local contexts. While government policies set important frameworks, my observations suggest that top-down solutions often fail to account for the diversity of school environments. More effective approaches might involve creating platforms for teacher innovation sharing, developing flexible curricula that can adapt to resource limitations, and establishing mentorship programs between experienced and new teachers.</p>
+                <p>International agencies and NGOs play significant roles, particularly in resource provision and teacher training. However, their interventions sometimes lack continuity or fail to build on existing local knowledge. There's a need for more sustained partnerships that combine external resources with insider understanding. The most promising initiatives I encountered were those that empowered school-level decision-making while providing access to broader networks and resources.</p>
+                <p>Ultimately, this project reinforced that educational quality depends less on any single factor than on the complex interplay of committed individuals, adaptable systems, and community support. The Syrian schools I visited, despite their challenges, contained countless examples of this principle in action - offering lessons that extend far beyond their specific context.</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="main.js"></script>
+    <script>feather.replace();</script>
+</body>
+</html>
