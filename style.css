@@ -1,45 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
-
-body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+*{
+    scroll-behavior: smooth;
 }
 
-.prose {
-    font-size: 1.125rem;
-    line-height: 1.75;
-}
-
-.prose p {
-    margin-bottom: 1.5em;
-}
-
-@media (max-width: 768px) {
-    .prose {
-        font-size: 1rem;
-    }
-    
-    .float-right {
-        float: none !important;
-        margin-left: 0 !important;
-        margin-bottom: 2rem !important;
-        width: 100% !important;
-    }
-    .float-right img{
-        width: 60% !important;
-    }
-}
-
-/* Smooth responsive padding transition */
-main {
-    transition: padding 0.3s ease;
-}
-
-/* Chart container responsive adjustments */
-canvas {
-    max-width: 100%;
-    height: auto;
-}
 
 nav {
     position: fixed;
@@ -77,26 +40,34 @@ nav {
     border-bottom: 2px solid #000;
 }
 
-  /* Add top spacing to content so it doesn't hide under fixed nav */
+
 body {
+    line-height: 1.6;
     margin: 0;
-    font-family: "Arial", sans-serif;
 }
 main {
+    transition: padding 0.3s ease;
     margin-top: 70px; /* space for fixed nav */
     padding: 20px;
 }
-
-  /* Optional: make it look good on small screens */
-@media (max-width: 600px) {
-    nav{
-        display: none;
-    }
-    main {
-        margin-top: 0; /* space for fixed nav */
-    }
+.prose {
+    font-size: 1.125rem;
+    line-height: 1.75;
 }
 
+.prose p {
+    margin-bottom: 1.5em;
+}
+
+
+/* Smooth responsive padding transition */
+
+
+/* Chart container responsive adjustments */
+canvas {
+    max-width: 100%;
+    height: auto;
+}
 
 #score-chart {
     font-family: "Arial", sans-serif;
@@ -139,4 +110,34 @@ main {
 #score-chart button:hover {
     background-color: #222;
     color: #fff;
+}
+
+
+@media (max-width: 768px) {
+    .prose {
+        font-size: 1rem;
+    }
+    
+    .float-right {
+        float: none !important;
+        margin-left: 0 !important;
+        margin-bottom: 2rem !important;
+        width: 100% !important;
+    }
+    .float-right img{
+        width: 80% !important;
+    }
+}
+
+@media (max-width: 600px) {
+    nav{
+        display: none;
+    }
+    main {
+        margin-top: 0; /* space for fixed nav */
+    }
+    #home img{
+        width: 100%;
+        height: auto;
+    }
 }
