@@ -141,4 +141,7 @@ canvas {
         width: 100%;
         height: auto;
     }
+    #temp{
+        display: block !important;
+    }
 }
