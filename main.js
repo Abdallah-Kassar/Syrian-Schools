@@ -2,9 +2,9 @@ const canvas = document.getElementById("scoreChart");
 const ctx = canvas.getContext("2d");
 
 const data = {
-    Total: { public: 72, private: 86 },
-    Math: { public: 68, private: 90 },
-    Physics: { public: 65, private: 84 }
+    Total: { public: 61, private: 75 },
+    Math: { public: 59, private: 72 },
+    Physics: { public: 61, private: 78 }
 };
 
 const colors = {
