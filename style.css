@@ -113,7 +113,9 @@ canvas {
     color: #fff;
 }
 
-
+#media-invite{
+    display: flex; align-items: start;  justify-content: center; flex-wrap: wrap; margin-inline: auto; 
+}
 @media (max-width: 768px) {
     .prose {
         font-size: 1rem;
@@ -127,6 +129,14 @@ canvas {
     }
     .float-right img{
         width: 80% !important;
+        margin: auto;
+    }
+    #media-invite div:first-of-type{
+        width: 80% !important;
+    }
+    #media-invite div:nth-of-type(2){
+        width: 100% !important;
+        margin-top: 20px;
     }
 }
 
