@@ -137,6 +137,7 @@ canvas {
     #media-invite div:nth-of-type(2){
         width: 100% !important;
         margin-top: 20px;
+        padding-left: 0 !important;
     }
 }
 
