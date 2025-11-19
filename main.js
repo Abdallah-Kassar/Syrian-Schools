@@ -3,8 +3,8 @@ const ctx = canvas.getContext("2d");
 
 const data = {
     Total: { public: 61, private: 75 },
-    Math: { public: 59, private: 72 },
-    Physics: { public: 61, private: 78 }
+    Math: { public: 59, private: 71 },
+    Physics: { public: 63, private: 78 }
 };
 
 const colors = {
