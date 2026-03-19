@@ -38,12 +38,10 @@ function drawChart(subject, progress = 1) {
     const values = [scores.public, scores.private];
     const colorValues = [colors.public, colors.private];
 
-    // Title
     ctx.font = "20px Arial";
     ctx.fillStyle = "#222";
     ctx.fillText(`${subject} Scores`, 290, 40);
 
-    // Axes
     ctx.beginPath();
     ctx.moveTo(chart.xStart, 50);
     ctx.lineTo(chart.xStart, chart.yStart);
@@ -52,7 +50,6 @@ function drawChart(subject, progress = 1) {
     ctx.lineWidth = 1.5;
     ctx.stroke();
 
-    // Y-axis labels + gridlines
     ctx.fillStyle = "#333";
     ctx.font = "14px Arial";
     for (let yVal = 0; yVal <= chart.maxScore; yVal += metricsStep) {
@@ -67,7 +64,6 @@ function drawChart(subject, progress = 1) {
         ctx.stroke();
     }
 
-    // Bars
     for (let i = 0; i < values.length; i++) {
         const barHeight = (values[i] / chart.maxScore) * chart.chartHeight * progress;
         const x = 180 + i * (chart.barWidth + 120);
@@ -76,7 +72,6 @@ function drawChart(subject, progress = 1) {
         ctx.fillStyle = colorValues[i];
         ctx.fillRect(x, y, chart.barWidth, barHeight);
 
-        // Labels below bars
         ctx.fillStyle = "#000";
         ctx.font = "15px Arial";
         ctx.fillText(labels[i], x - 10, chart.yStart + 25);
@@ -91,7 +86,7 @@ function animateChart(subject) {
     animationProgress = 0;
 
     function step() {
-        animationProgress += 0.05; // faster speed
+        animationProgress += 0.05;
         if (animationProgress > 1) animationProgress = 1;
         const easedProgress = easeOutCubic(animationProgress);
         drawChart(subject, easedProgress);
